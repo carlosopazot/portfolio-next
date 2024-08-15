@@ -1,0 +1,57 @@
+import { Button } from '@headlessui/react'
+import {
+  LinkedinFilled,
+  BehanceOutlined,
+  GithubOutlined,
+  GitlabOutlined
+} from '@ant-design/icons'
+import Link from 'next/link'
+
+const socialLinks = [
+  {
+    icon: LinkedinFilled,
+    href: 'https://www.linkedin.com/in/carlosopazo'
+  },
+  {
+    icon: BehanceOutlined,
+    href: 'https://www.behance.net/carlosopazo'
+  },
+  {
+    icon: GithubOutlined,
+    href: 'https://github.com/carlosopazot'
+  },
+  {
+    icon: GitlabOutlined,
+    href: 'https://gitlab.com/copazo'
+  }
+]
+
+const Footer = () => {
+  return (
+    <footer className='bg-gray-100 dark:bg-slate-900 text-white px-6 py-8'>
+      <div className='container mx-auto mt-auto px-6'>
+        <div className='grid grid-cols-2'>
+          <div>
+            <p className='text-2xl font-semibold text-slate-600 dark:text-white'>
+              copazo.
+            </p>
+          </div>
+          <div className='flex gap-3 justify-end'>
+            {socialLinks.map((link) => (
+              <Link
+                target='_blank'
+                key={link.href}
+                href={link.href}
+                className='inline-flex justify-center items-center gap-2 rounded-full bg-gray-700 w-10 h-10 hover:bg-gray-600 transition ease-in-out'
+              >
+                <link.icon style={{ fontSize: '20px' }} />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
