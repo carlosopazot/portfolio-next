@@ -1,7 +1,6 @@
 import { Project } from '@/types'
 import { RightOutlined } from '@ant-design/icons'
 import Link from 'next/link'
-import Badge from '@/components/Badge/Badge'
 import ProjectTags from '@/components/ProjectTags/ProjectTags'
 
 const ProjectCardInfo = ({ item }: { item: Project }) => {

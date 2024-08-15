@@ -4,7 +4,7 @@ import { projects } from '@/data/projects'
 import Link from 'next/link'
 import ProjectSection from '@/components/ProjectSection/ProjectSection'
 import ProjectHeader from '@/components/ProjectHeader/ProjectHeader'
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 
 interface PageProps {
   params: {

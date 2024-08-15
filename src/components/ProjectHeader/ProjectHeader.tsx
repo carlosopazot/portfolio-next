@@ -1,14 +1,7 @@
 import ProjectTags from '@/components/ProjectTags/ProjectTags'
+import { Project } from '@/types/projects'
 
-interface ProjectHeaderProps {
-  project: {
-    title: string
-    description: string
-    bgHeaderColor: string
-  }
-}
-
-const ProjectHeader = ({ project }: ProjectHeaderProps) => {
+const ProjectHeader = ({ project }: { project: Project }) => {
   return (
     <section
       className='pt-32 pb-20'
