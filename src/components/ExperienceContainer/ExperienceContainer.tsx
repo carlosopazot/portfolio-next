@@ -56,10 +56,7 @@ const ExperienceContainer = () => {
               <TabPanel key={name} className='rounded-xl gap-8'>
                 <ol className='relative border-s border-gray-200 dark:border-gray-700'>
                   {items.map((item) => (
-                    <ExperienceCard
-                      key={item.id}
-                      item={{ ...item, description: [] }}
-                    />
+                    <ExperienceCard key={item.id} item={item} />
                   ))}
                 </ol>
               </TabPanel>

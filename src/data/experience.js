@@ -51,19 +51,22 @@ export const categories = [
         id: 1,
         title: 'Curso Desarrollo Web React JS',
         date: 'Julio 2024 - Enero 2024',
-        company: 'Coderhouse'
+        company: 'Coderhouse',
+        description: null
       },
       {
         id: 2,
         title: 'Diplomado Experiencia de Usuario',
         date: 'Junio 2020 - Diciembre 2020',
-        company: 'Universidad Católica de Valparaíso'
+        company: 'Universidad Católica de Valparaíso',
+        description: null
       },
       {
         id: 3,
         title: 'Diseño',
         date: '2008 - 2014',
-        company: 'Universidad de Valparaíso'
+        company: 'Universidad de Valparaíso',
+        description: null
       }
     ]
   }
