@@ -9,15 +9,15 @@ export const skills = [
     id: 1,
     title: 'UX',
     color: 'bg-pink-200',
-    icon: DesktopOutlined,
+    icon: <DesktopOutlined className='text-3xl text-gray-800' />,
     description:
-      'I have experience designing user interfaces and user experiences for web and mobile applications.',
+      'Creo experiencias centradas en las necesidades de los usuarios',
     items: [
       'Research',
       'Journey Maps',
-      'Usability Testing',
+      'Test de usabilidad',
       'User Flows',
-      'Information Architecture',
+      'Arquitectura de la información',
       'Benchmarks',
       'User Persona'
     ]
@@ -25,28 +25,26 @@ export const skills = [
   {
     id: 2,
     title: 'UI',
-    icon: LayoutOutlined,
+    icon: <LayoutOutlined className='text-3xl text-gray-800' />,
     color: 'bg-purple-200',
     description:
-      'I have experience designing user interfaces for web and mobile applications.',
+      'Diseño interfaces atractivas y funcionales para aplicaciones web y móviles.',
     items: [
       'Wireframes',
       'Mockups',
-      'Design Systems',
+      'Prototipado',
+      'Sistemas de diseño',
       'Style Guides',
-      'Typography',
-      'Color Theory',
-      'Grid Systems',
-      'Responsive Design'
+      'Diseño responsivo'
     ]
   },
   {
     id: 3,
     title: 'Frontend',
-    icon: CodeOutlined,
+    icon: <CodeOutlined className='text-3xl text-gray-800' />,
     color: 'bg-indigo-200',
     description:
-      'I have experience developing frontend applications for web and mobile.',
+      'Desarrollo interfaces de usuario con tecnologías web modernas.',
     items: [
       'HTML',
       'CSS',

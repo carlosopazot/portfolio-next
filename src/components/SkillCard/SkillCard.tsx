@@ -2,17 +2,13 @@ import { Skill } from '@/types'
 import Badge from '@/components/Badge/Badge'
 
 const SkillCard = ({ item }: { item: Skill }) => {
-  const IconComponent = item.icon as React.ElementType
-
   return (
     <div className='px-6 py-8 rounded-lg bg-gray-100 dark:bg-white/10 text-center'>
       <div className='flex justify-center align-middle flex-col gap-3'>
         <div
           className={`${item.color} h-16 w-16 flex justify-center align-middle rounded-full mx-auto`}
         >
-          {IconComponent && (
-            <IconComponent className='text-3xl text-gray-800' />
-          )}
+          {item.icon}
         </div>
         <h3 className='text-2xl font-semibold text-gray-900 dark:text-white'>
           {item.title}

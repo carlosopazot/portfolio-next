@@ -16,7 +16,10 @@ const ProjectsContainer = () => {
       </div>
       <div className='mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8'>
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard
+            key={project.id}
+            project={{ ...project, sections: project.sections || [] }}
+          />
         ))}
       </div>
     </div>
