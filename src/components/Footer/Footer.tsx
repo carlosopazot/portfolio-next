@@ -28,23 +28,23 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-100 dark:bg-slate-900 text-white px-6 py-8'>
+    <footer className='bg-gray-100 dark:bg-slate-900 text-white py-8'>
       <div className='container mx-auto mt-auto px-6'>
-        <div className='grid grid-cols-2'>
-          <div>
+        <div className='grid grid-cols-3'>
+          <div className='col-span-1'>
             <p className='text-2xl font-semibold text-slate-600 dark:text-white'>
               copazo.
             </p>
           </div>
-          <div className='flex gap-3 justify-end'>
+          <div className='flex gap-3 justify-end col-span-2'>
             {socialLinks.map((link) => (
               <Link
                 target='_blank'
                 key={link.href}
                 href={link.href}
-                className='inline-flex justify-center items-center gap-2 rounded-full bg-gray-700 w-10 h-10 hover:bg-gray-600 transition ease-in-out'
+                className='flex justify-center items-center rounded-full bg-gray-700 w-10 h-10 hover:bg-gray-600 transition ease-in-out'
               >
-                <link.icon style={{ fontSize: '20px' }} />
+                <link.icon />
               </Link>
             ))}
           </div>
