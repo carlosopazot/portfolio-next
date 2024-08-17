@@ -5,6 +5,7 @@ export interface Skill {
   title: string
   icon: ReactNode
   color: string
+  delay: number
   description: string
   items?: string[]
 }

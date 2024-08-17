@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
   return (
     <div
-      className='relative h-60 flex flex-col items-center justify-center p-6 bg-white rounded-lg dark:bg-gray-900 overflow-hidden'
+      className='relative z-10 h-60 flex flex-col items-center justify-center p-6 bg-white rounded-lg dark:bg-gray-900 overflow-hidden'
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
     >
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           leaveFrom='translate-y-0'
           leaveTo='translate-y-full'
         >
-          <div className='absolute z-10 bottom-0 left-0 rounded-lg right-0 w-full bg-white dark:bg-slate-800 p-4 flex flex-col align-middle gap-2'>
+          <div className='absolute z-50 bottom-0 left-0 rounded-lg right-0 w-full bg-white dark:bg-slate-800 p-4 flex flex-col align-middle gap-2'>
             <h3 className='text-2xl font-semibold text-gray-900 dark:text-white'>
               {project.title}
             </h3>

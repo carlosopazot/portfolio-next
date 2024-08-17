@@ -4,7 +4,7 @@ import { Skill } from '@/types'
 
 const SkillContainer = () => {
   return (
-    <div className='py-20' id='skills'>
+    <div className='py-20 scroll-mt-20' id='skills'>
       <div className='container mx-auto'>
         <div className='text-center'>
           <h2 className='text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-2'>

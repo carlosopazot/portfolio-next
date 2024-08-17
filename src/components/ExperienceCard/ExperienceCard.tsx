@@ -21,7 +21,7 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => {
               <li className='text-lg text-gray-500 dark:text-gray-400 font-semibold'>
                 {item.company}
               </li>
-              <li className='text-gray-400 dark:text-gray-500'>{item.date}</li>
+              <li className='text-gray-400 dark:text-gray-200'>{item.date}</li>
             </ul>
           </div>
           {item.description && (

@@ -3,6 +3,7 @@ import {
   LayoutOutlined,
   CodeOutlined
 } from '@ant-design/icons'
+import { delay } from 'framer-motion'
 
 export const skills = [
   {
@@ -10,6 +11,7 @@ export const skills = [
     title: 'UX',
     color: 'bg-pink-200',
     icon: <DesktopOutlined className='text-3xl text-gray-800' />,
+    delay: 0.5,
     description:
       'Creo experiencias centradas en las necesidades de los usuarios',
     items: [
@@ -26,6 +28,7 @@ export const skills = [
     id: 2,
     title: 'UI',
     icon: <LayoutOutlined className='text-3xl text-gray-800' />,
+    delay: 0.75,
     color: 'bg-purple-200',
     description:
       'Diseño interfaces atractivas y funcionales para aplicaciones web y móviles.',
@@ -42,6 +45,7 @@ export const skills = [
     id: 3,
     title: 'Frontend',
     icon: <CodeOutlined className='text-3xl text-gray-800' />,
+    delay: 1,
     color: 'bg-indigo-200',
     description:
       'Desarrollo interfaces de usuario con tecnologías web modernas.',
