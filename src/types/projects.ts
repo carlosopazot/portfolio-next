@@ -7,6 +7,7 @@ export interface Project {
   cover: string | StaticImageData
   tags?: string[]
   bgHeaderColor: string
+  delay: number
   sections: Array<{
     id: string | number
     title: string

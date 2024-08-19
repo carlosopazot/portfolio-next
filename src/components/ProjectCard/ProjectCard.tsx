@@ -7,6 +7,7 @@ import { Project } from '@/types/projects'
 import ProjectTags from '@/components/ProjectTags/ProjectTags'
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const [isHovered, setIsHovered] = useState(false)
@@ -18,10 +19,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
   }
 
   return (
-    <div
+    <motion.div
       className='relative z-10 h-60 flex flex-col items-center justify-center p-6 bg-white rounded-lg dark:bg-gray-900 overflow-hidden'
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: project.delay }}
+      viewport={{ once: true }}
     >
       <Image
         className='rounded-lg object-cover'
@@ -56,7 +61,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </TransitionChild>
       </Transition>
-    </div>
+    </motion.div>
   )
 }
 

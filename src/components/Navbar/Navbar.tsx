@@ -79,7 +79,7 @@ const Navbar = () => {
       </nav>
       {mobileMenuOpen && (
         <motion.div
-          className='fixed inset-x-2 top-20 bg-gray-100 dark:bg-slate-700 shadow-lg rounded-lg px-4 py-6 lg:hidden'
+          className='fixed inset-x-2 top-[5.25rem] bg-gray-100 dark:bg-slate-700 shadow-lg rounded-lg px-4 py-6 lg:hidden'
           id='menu'
           initial={{ opacity: 0, y: -20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}

@@ -34,6 +34,14 @@ import Md2 from '@/images/projects/maestranza/md_2.png'
 import Md3 from '@/images/projects/maestranza/md_3.png'
 import Md4 from '@/images/projects/maestranza/md_4.png'
 
+import Riivi1 from '@/images/projects/riivi/riivi_1.png'
+import Riivi2 from '@/images/projects/riivi/riivi_2.png'
+import Riivi3 from '@/images/projects/riivi/riivi_3.png'
+import Riivi4 from '@/images/projects/riivi/riivi_4.png'
+import Riivi5 from '@/images/projects/riivi/riivi_5.png'
+import Riivi6 from '@/images/projects/riivi/riivi_6.png'
+import Riivi7 from '@/images/projects/riivi/riivi_7.png'
+
 export const projects = [
   {
     id: 'wom',
@@ -42,6 +50,7 @@ export const projects = [
     cover: WomCover,
     bgHeaderColor: '#5A2E90',
     tags: ['UX', 'UI'],
+    delay: 0.25,
     sections: [
       {
         id: 'intro',
@@ -61,11 +70,7 @@ export const projects = [
         title: 'Diseño de interfaz',
         intro:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        images: [
-          Wom2,
-          Wom3,
-          Wom4
-        ]
+        images: [Wom2, Wom3, Wom4]
       }
     ]
   },
@@ -76,6 +81,7 @@ export const projects = [
     cover: SalfaCover,
     bgHeaderColor: '#012D55',
     tags: ['UI', 'Frontend'],
+    delay: 0.5,
     sections: [
       {
         id: 'intro',
@@ -88,7 +94,7 @@ export const projects = [
         title: 'Interfaz de usuario',
         intro:
           'Salfa Rent es una plataforma de arriendo de vehículos que permite a los usuarios arrendar vehículos de forma rápida y sencilla.',
-        images: [ Salfa1, Salfa2, Salfa3, Salfa4 ]
+        images: [Salfa1, Salfa2, Salfa3, Salfa4]
       }
     ]
   },
@@ -99,6 +105,7 @@ export const projects = [
     cover: SurviCover,
     bgHeaderColor: '#0000B7',
     tags: ['UI'],
+    delay: 0.75,
     sections: [
       {
         id: 'intro',
@@ -111,7 +118,7 @@ export const projects = [
         title: 'Interfaz de usuario',
         intro:
           'Survi es una plataforma para la creación de encuestas que permite a los usuarios crear, compartir y analizar encuestas de forma rápida y sencilla.',
-        images: [ Survi1, Survi2 ]
+        images: [Survi1, Survi2]
       }
     ]
   },
@@ -122,6 +129,7 @@ export const projects = [
     cover: MettriCover,
     bgHeaderColor: '#3457D8',
     tags: ['UX', 'UI'],
+    delay: 1,
     sections: [
       {
         id: 'intro',
@@ -134,21 +142,21 @@ export const projects = [
         title: 'Arquitectura del sitio',
         intro:
           'Mettri es una plataforma para la gestión de clima laboral que permite a los usuarios evaluar, analizar y mejorar el clima laboral de sus organizaciones.',
-        images: [ MettriNav]
+        images: [MettriNav]
       },
       {
         id: 'branding',
         title: 'Branding',
         intro:
           'Mettri es una plataforma para la gestión de clima laboral que permite a los usuarios evaluar, analizar y mejorar el clima laboral de sus organizaciones.',
-        images: [ MettriBrand, MettriColors, MettriTypography ]
+        images: [MettriBrand, MettriColors, MettriTypography]
       },
       {
         id: 'ui',
         title: 'Interfaz de usuario',
         intro:
           'Mettri es una plataforma para la gestión de clima laboral que permite a los usuarios evaluar, analizar y mejorar el clima laboral de sus organizaciones.',
-        images: [ Mettri1, Mettri2, Mettri3 ]
+        images: [Mettri1, Mettri2, Mettri3]
       }
     ]
   },
@@ -159,18 +167,44 @@ export const projects = [
     cover: MaestranzaCover,
     bgHeaderColor: '#1E3C8D',
     tags: ['UI', 'Frontend'],
+    delay: 1.25,
     sections: [
       {
         id: 'intro',
         title: 'Introducción',
-        intro: 'Maestranza Diesel es una empresa de servicios de transporte y logística que ofrece soluciones de transporte a nivel nacional.'
+        intro:
+          'Maestranza Diesel es una empresa de servicios de transporte y logística que ofrece soluciones de transporte a nivel nacional.'
       },
       {
         id: 'ui',
         title: 'Interfaz de usuario',
         intro:
           'Maestranza Diesel es una empresa de servicios de transporte y logística que ofrece soluciones de transporte a nivel nacional.',
-        images: [ Md1, Md2, Md3, Md4 ]
+        images: [Md1, Md2, Md3, Md4]
+      }
+    ]
+  },
+  {
+    id: 'riivi',
+    title: 'Riivi',
+    description: 'Plataforma de streaming de contenido latinoamericano.',
+    cover: RiiviCover,
+    bgHeaderColor: '#28015B',
+    tags: ['Frontend'],
+    delay: 1.5,
+    sections: [
+      {
+        id: 'intro',
+        title: 'Introducción',
+        intro:
+          'Riivi es una plataforma de streaming de contenido latinoamericano que permite a los usuarios ver contenido en tiempo real.'
+      },
+      {
+        id: 'front',
+        title: 'Frontend',
+        intro:
+          'Mi trabajo consistio en el desarrollo del frontend de la plataforma, plasmando los diseños de la interfaz de usuario en código HTML, CSS y JavaScript.',
+        images: [Riivi1, Riivi2, Riivi3, Riivi4, Riivi5, Riivi6, Riivi7]
       }
     ]
   }
