@@ -80,7 +80,7 @@ const ExperienceContainer = () => {
           </TabGroup>
         </motion.div>
       </div>
-      <BgShape shape2 />
+      <BgShape />
     </div>
   )
 }

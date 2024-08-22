@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero/Hero'
-import ContactForm from '@/components/ContactForm/ContactForm'
+import ContactContainer from '@/components/ContactContainer/ContactContainer'
 import ProjectsContainer from '@/components/ProjectsContainer/ProjectsContainer'
 import ExperienceContainer from '@/components/ExperienceContainer/ExperienceContainer'
 import SkillContainer from '@/components/SkillContainer/SkillContainer'
@@ -13,7 +13,7 @@ export default function Home() {
       <ExperienceContainer />
       <SkillContainer />
       <ProjectsContainer />
-      <ContactForm />
+      <ContactContainer />
     </div>
   )
 }
