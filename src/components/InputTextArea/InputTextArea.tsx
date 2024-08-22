@@ -24,8 +24,9 @@ const InputTextArea = ({
         id={id}
         rows={rows}
         className={`block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder-transparent focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition ease-in-out peer bg-transparent`}
-        placeholder=' ' // Empty placeholder to trigger the floating label behavior
+        placeholder=''
         value={value}
+        maxLength={250}
         onChange={onChange}
         required={required}
       />
@@ -39,6 +40,9 @@ const InputTextArea = ({
       >
         {label}
       </label>
+      <div className='text-right mt-1 text-sm text-gray-800 dark:text-gray-200'>
+        {value.length}/250
+      </div>
     </div>
   )
 }
