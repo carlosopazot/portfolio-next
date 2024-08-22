@@ -1,5 +1,5 @@
 export async function verifyRecaptcha(token: string) {
-  const secretKey = process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY
   const response = await fetch(
     `https://www.google.com/recaptcha/api/siteverify`,
     {

@@ -7,6 +7,9 @@ const nextConfig = {
       'flowbite.s3.amazonaws.com',
       'placehold.co'
     ]
+  },
+  env: {
+    RECAPTCHA_SECRET_KEY: process.env.RECAPTCHA_SECRET_KEY
   }
 }
 
