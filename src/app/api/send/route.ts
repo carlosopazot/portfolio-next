@@ -2,7 +2,7 @@ import EmailTemplate from '@/components/EmailTemplate/EmailTemplate'
 import { Resend } from 'resend'
 import { verifyRecaptcha } from '@/utils/verifyRecaptcha'
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
   try {
@@ -19,8 +19,8 @@ export async function POST(request: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: `${firstName} ${lastName} <${process.env.NEXT_PUBLIC_FROM_EMAIL}>`,
-      to: process.env.NEXT_PUBLIC_SUPPORT_EMAIL || '',
+      from: `${firstName} ${lastName} <${process.env.FROM_EMAIL}>`,
+      to: process.env.SUPPORT_EMAIL || '',
       subject: 'Mensaje desde mi sitio web',
       react: EmailTemplate({ firstName, lastName, message, email })
     })
