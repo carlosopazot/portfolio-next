@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline'
 import BgShape from '../BgShape/BgShape'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -23,7 +24,9 @@ const Hero = () => {
             Diseñador UI <span className='font-light mx-2'>|</span> Frontend
           </h2>
         </motion.div>
-        <ChevronDoubleDownIcon className='absolute bottom-8 animate-bounce left-1/2 w-8 h-8 text-gray-900 dark:text-white' />
+        <Link href='#about'>
+          <ChevronDoubleDownIcon className='absolute bottom-20 animate-bounce left-1/2 w-8 h-8 text-gray-900 dark:text-white' />
+        </Link>
       </div>
       <BgShape shape2 />
     </div>

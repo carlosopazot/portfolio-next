@@ -5,7 +5,7 @@ import ToggleTheme from '@/components/ToggleTheme/ToggleTheme'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
 import { NavMenu } from './NavMenu'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -38,10 +38,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition ease-in-out ${scrolled ? 'bg-transparent' : 'backdrop-blur-lg bg-white/10'}`}
+      className={`fixed inset-x-0 top-0 z-50 transition ease-in-out ${scrolled ? 'bg-transparent' : 'bg-white shadow-sm dark:bg-slate-800'}`}
     >
       <nav
-        className='flex items-center justify-between px-6 py-4 container mx-auto'
+        className='flex items-center justify-between px-6 py-6 container mx-auto'
         aria-label='Global'
       >
         <div className='flex lg:flex-1'>

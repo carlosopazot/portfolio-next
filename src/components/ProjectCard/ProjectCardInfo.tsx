@@ -1,5 +1,5 @@
 import { Project } from '@/types'
-import { RightOutlined } from '@ant-design/icons'
+import { ChevronRightIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import ProjectTags from '@/components/ProjectTags/ProjectTags'
 
@@ -16,7 +16,8 @@ const ProjectCardInfo = ({ item }: { item: Project }) => {
           className='flex w-8 h-8 rounded-full align-middle justify-center text-gray-900 bg-gray-300 hover:bg-gray-400 transition ease-in-out'
           passHref
         >
-          <RightOutlined />
+          {/* <RightOutlined /> */}
+          <ChevronRightIcon className='w-6 h-6 text-gray-900 dark:text-white' />
         </Link>
       </div>
     </div>

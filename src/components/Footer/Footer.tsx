@@ -42,7 +42,7 @@ const Footer = () => {
                 target='_blank'
                 key={link.href}
                 href={link.href}
-                className='flex justify-center items-center rounded-full bg-gray-700 w-10 h-10 hover:bg-gray-600 transition ease-in-out'
+                className='flex justify-center items-center rounded-full bg-gray-300 dark:bg-white/10 w-10 h-10 hover:bg-gray-400 transition ease-in-out'
               >
                 <link.icon />
               </Link>
