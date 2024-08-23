@@ -46,6 +46,7 @@ const ToggleTheme = () => {
     <Button
       onClick={toggle}
       className='inline-flex items-center gap-2 rounded-md py-1.5 px-3 text-sm/6 font-semibold text-gray-800 dark:text-white focus:outline-none data-[hover]:bg-gray-200 dark:data-[hover]:bg-gray-600 data-[open]:bg-gray-700 data-[focus]:outline-1 transition ease-in-out'
+      aria-label='Cambiar tema del sitio'
     >
       {theme === 'light' ? (
         <MoonIcon className='h-5 w-5' />

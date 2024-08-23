@@ -37,10 +37,9 @@ const About = () => {
           >
             <Image
               src={Avatar}
-              alt='Logo'
+              alt='Foto de perfil'
               width={260}
               height={260}
-              priority
               className='mx-auto rounded-full'
             />
           </motion.div>
