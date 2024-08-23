@@ -5,12 +5,7 @@ interface EmailTemplateProps {
   email: string
 }
 
-const EmailTemplate = ({
-  firstName,
-  lastName,
-  message,
-  email
-}: EmailTemplateProps) => {
+const EmailTemplate = ({ message, email }: EmailTemplateProps) => {
   return (
     <div>
       <p>{message}</p>
