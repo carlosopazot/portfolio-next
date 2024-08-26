@@ -14,4 +14,5 @@ export interface Project {
     intro: string
     images?: StaticImageData[]
   }>
+  behanceLink?: string | null
 }

@@ -48,7 +48,7 @@ export const skills = [
     delay: 1,
     color: 'bg-indigo-200',
     description:
-      'Desarrollo interfaces de usuario con tecnologías web modernas.',
+      'Traduzco mis diseños al código, utilizando tecnologías web modernas.',
     items: [
       'HTML',
       'CSS',
