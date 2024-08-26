@@ -6,6 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
 import { NavMenu } from './NavMenu'
 import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,6 +19,8 @@ const Navbar = () => {
     { name: 'Proyectos', href: '/#projects' },
     { name: 'Contacto', href: '/#contact' }
   ]
+
+  const pathname = usePathname()
 
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -38,14 +41,14 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition ease-in-out ${scrolled ? 'bg-transparent' : 'bg-white shadow-sm dark:bg-slate-800'}`}
+      className={`fixed inset-x-0 top-0 z-50 transition ease-in-out ${scrolled && pathname === '/' ? 'bg-transparent' : 'bg-white/90 shadow-lg dark:bg-slate-800/95 backdrop-blur-lg'}`}
     >
       <nav
         className='flex items-center justify-between px-6 py-6 container mx-auto'
         aria-label='Global'
       >
         <div className='flex lg:flex-1'>
-          <Link href='/' className='-m-1.5 p-1.5'>
+          <Link href='/#hero' className='-m-1.5 p-1.5'>
             <span className='sr-only'>Carlos Opazo</span>
             <h4 className=' text-2xl text-gray-800 dark:text-white font-semibold'>
               copazo.

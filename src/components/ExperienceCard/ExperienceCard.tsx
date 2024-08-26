@@ -4,7 +4,11 @@ import {
   DisclosureButton,
   DisclosurePanel
 } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/24/outline'
+import {
+  ChevronDownIcon,
+  CalendarDaysIcon,
+  CalendarIcon
+} from '@heroicons/react/24/outline'
 
 const ExperienceCard = ({ item }: { item: ExperienceItem }) => {
   return (
@@ -21,7 +25,10 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => {
               <li className='text-lg text-gray-500 dark:text-gray-400 font-semibold'>
                 {item.company}
               </li>
-              <li className='text-gray-400 dark:text-gray-200'>{item.date}</li>
+              <li className='text-gray-500 dark:text-gray-200 flex items-center'>
+                <CalendarIcon className='h-4 w-4 inline-block mr-1' />
+                {item.date}
+              </li>
             </ul>
           </div>
           {item.description && (

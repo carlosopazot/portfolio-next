@@ -7,9 +7,9 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <div className='relative isolate pt-14 lg:px-8 h-[95vh]'>
+    <div className='relative isolate h-[95vh] flex items-center' id='hero'>
       <BgShape />
-      <div className='mx-auto max-w-2xl py-40 sm:py-48 lg:py-56'>
+      <div className='mx-auto max-w-2xl'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const Hero = () => {
             carlos opazo.
           </h1>
           <h2 className='mt-6 leading-8 text-gray-400 text-xl sm:text-3xl font-semibold'>
-            Diseñador UI <span className='font-light mx-2'>|</span> Frontend
+            Diseñador UX-UI <span className='font-light mx-2'>|</span> Frontend
           </h2>
         </motion.div>
         <Link href='#about'>
