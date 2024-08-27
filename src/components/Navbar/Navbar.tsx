@@ -28,16 +28,20 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY < 60
-      if (offset !== scrolled) {
-        setScrolled(offset)
-      }
+      const isScrolled = window.scrollY < 70 // True if scrolled more than 70px
+      setScrolled(isScrolled)
     }
-    document.addEventListener('scroll', handleScroll)
+
+    // Check scroll position on mount
+    handleScroll()
+
+    // Correctly add event listener
+    window.addEventListener('scroll', handleScroll)
+
     return () => {
-      document.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll)
     }
-  }, [scrolled])
+  }, [])
 
   return (
     <header
