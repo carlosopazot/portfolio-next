@@ -24,7 +24,7 @@ export const categories = [
       {
         id: 2,
         title: 'Diseñador UX / UI',
-        date: 'Mayo 2018 - Enero 2024',
+        date: 'Junio 2016 - Abril 2018',
         company: 'Tinet Soluciones',
         description: [
           'Desarrollo de investigación de usuario, user persona, benchmarks, test con usuarios, diseño de aplicaciones móvil.',
