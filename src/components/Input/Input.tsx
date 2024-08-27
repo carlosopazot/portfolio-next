@@ -36,7 +36,7 @@ const Input = ({
       />
       <label
         htmlFor={id}
-        className={`absolute left-3.5 top-2.5 text-sm text-gray-500 transform origin-[0] transition-all duration-200 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-placeholder-shown:left-3.5 peer-focus:-translate-y-5 peer-focus:scale-75 peer-focus:left-3.5 dark:text-white rounded-md peer-focus:bg-white dark:peer-focus:bg-slate-800 peer-focus:px-2 ${
+        className={`absolute left-3.5 top-2.5 text-sm text-gray-500 transform origin-[0] transition-all duration-200 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3.5 peer-placeholder-shown:left-3.5 peer-focus:-translate-y-5 peer-focus:scale-75 peer-focus:left-3.5 dark:text-white rounded-md peer-focus:bg-white dark:peer-focus:bg-slate-800 peer-focus:px-2 ${
           value
             ? '-translate-y-5 scale-75 left-3.5 bg-white dark:bg-slate-800 px-2'
             : ''
