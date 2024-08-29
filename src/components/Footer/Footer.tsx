@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <footer className='bg-gray-100 dark:bg-slate-900 text-white py-8'>
       <div className='container mx-auto mt-auto px-6'>
-        <div className='grid grid-cols-3'>
-          <div className='col-span-1'>
+        <div className='grid grid-cols-4 gap-6'>
+          <div className='col-span-4 sm:col-span-2'>
             <p className='text-2xl font-semibold text-slate-600 dark:text-white mb-4'>
               copazo.
             </p>
-            <div className='flex gap-4'>
+            <div className='flex flex-wrap gap-4 sm:gap-2 lg:gap-4'>
               {contactLinks.map((item) => (
                 <Link
                   key={item.text}
@@ -25,7 +25,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className='flex gap-3 justify-end col-span-2 items-center'>
+          <div className='flex gap-3 justify-start sm:justify-end col-span-4 sm:col-span-2 items-center'>
             {socialLinks.map((link) => (
               <Link
                 target='_blank'
