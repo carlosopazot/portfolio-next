@@ -7,19 +7,11 @@ import { useEffect, useState } from 'react'
 import { NavMenu } from './NavMenu'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import { navigation } from '@/data/sitelinks'
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-
-  const navigation = [
-    { name: 'Acerca de mí', href: '/#about' },
-    { name: 'Experiencia', href: '/#experience' },
-    { name: 'Habilidades', href: '/#skills' },
-    { name: 'Proyectos', href: '/#projects' },
-    { name: 'Contacto', href: '/#contact' }
-  ]
-
   const pathname = usePathname()
 
   const toggleMenu = () => {
@@ -45,7 +37,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition ease-in-out ${scrolled && pathname === '/' ? 'bg-transparent' : 'bg-white/90 shadow-lg dark:bg-slate-800/95 backdrop-blur-lg'}`}
+      className={`fixed inset-x-0 top-0 z-50 transition ease-in-out ${(scrolled && pathname === '/') || pathname === '/not-found' ? 'bg-transparent' : 'bg-white/90 shadow-lg dark:bg-slate-800/95 backdrop-blur-lg'}`}
     >
       <nav
         className='flex items-center justify-between px-6 py-6 container mx-auto'
