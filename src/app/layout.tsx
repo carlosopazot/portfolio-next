@@ -8,7 +8,7 @@ const dmSans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Inicio | Carlos Opazo',
-  description: 'Diseñador UX/UI && Frontend.',
+  description: 'Diseñador UX/UI & Frontend.',
   icons: {
     icon: [
       {
@@ -20,6 +20,32 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: dark)',
         url: '/images/icon.png',
         href: '/images/icon.png'
+      }
+    ]
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_CL',
+    url: 'https://copazot.com',
+    title: 'Inicio | Carlos Opazo',
+    description: 'Diseñador UX/UI & Frontend.',
+    images: [
+      {
+        url: 'https://copazot.com/images/cover.png',
+        width: 1200,
+        height: 630,
+        alt: 'Carlos Opazo'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Inicio | Carlos Opazo',
+    description: 'Diseñador UX/UI & Frontend.',
+    images: [
+      {
+        url: 'https://copazot.com/images/cover.png',
+        alt: 'Carlos Opazo Portfolio'
       }
     ]
   }
