@@ -1,5 +1,3 @@
-// app/projects/[id]/page.tsx
-
 import { projects } from '@/data/projects'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -11,36 +9,40 @@ interface PageProps {
     id: string
   }
 }
-// Generate static params for each project
+
 export async function generateStaticParams() {
   return projects.map((project) => ({
     id: project.id.toString()
   }))
 }
 
-// Generate metadata for each project
 export async function generateMetadata({
   params
 }: PageProps): Promise<Metadata> {
   const id = params.id
   const project = await getProjectData(id)
-  // Add a return statement here
+
   return {
     title: `${project?.title} | Proyectos`
   }
 }
 
-// Fetch data for a specific project
 async function getProjectData(id: string) {
   return projects.find((project) => project.id.toString() === id)
 }
 
-// Page component to render the project
 export default async function ProjectPage({ params }: PageProps) {
   const project = await getProjectData(params.id)
 
   if (!project) {
-    return <div>Project not found</div>
+    return (
+      <div className='h-screen flex flex-col gap-2 justify-center items-center dark:text-white'>
+        <h2 className='font-semibold text-4xl'>Algo salió mal</h2>
+        <h4 className='font-normal'>
+          El proyecto que buscabas no se encuentra aquí
+        </h4>
+      </div>
+    )
   }
 
   return (
