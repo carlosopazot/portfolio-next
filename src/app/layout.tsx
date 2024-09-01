@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { DM_Sans } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
@@ -60,6 +61,7 @@ export default function RootLayout({
         <Navbar />
         <main className='relative snap-y'>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
