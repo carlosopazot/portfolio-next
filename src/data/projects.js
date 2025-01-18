@@ -45,7 +45,7 @@ export const projects = [
   {
     id: 'wom',
     title: 'Wom',
-    description: 'This is a Wom project description.',
+    description: 'Diseño de aplicación móvil.',
     cover: WomCover,
     bgHeaderColor: '#5A2E90',
     tags: ['UX', 'UI'],
