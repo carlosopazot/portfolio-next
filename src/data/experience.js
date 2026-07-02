@@ -2,6 +2,7 @@ import { BriefcaseIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
 
 export const categories = [
   {
+    id: 'professional',
     name: { es: 'Laboral', en: 'Professional' },
     icon: <BriefcaseIcon className='h-6 w-6' />,
     items: [
@@ -83,6 +84,7 @@ export const categories = [
     ]
   },
   {
+    id: 'academic',
     name: { es: 'Académica', en: 'Academic' },
     icon: <AcademicCapIcon className='h-6 w-6' />,
     items: [

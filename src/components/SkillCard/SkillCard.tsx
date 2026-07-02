@@ -31,8 +31,8 @@ const SkillCard = ({ item }: { item: Skill }) => {
           </p>
         </div>
         <div className='flex justify-center align-middle flex-wrap gap-2'>
-          {(item.items ?? []).map((tag) => (
-            <Badge key={tag.es} text={tag[language]} bgColor={item.color} />
+          {(item.items ?? []).map((tag, index) => (
+            <Badge key={index} text={tag[language]} bgColor={item.color} />
           ))}
         </div>
       </div>

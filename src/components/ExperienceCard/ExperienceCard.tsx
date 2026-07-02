@@ -42,8 +42,8 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => {
             className='origin-top transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0'
           >
             <ul className='list-disc ms-4'>
-              {item.description.map((desc) => (
-                <li key={desc.es} className='mt-2'>
+              {item.description.map((desc, index) => (
+                <li key={index} className='mt-2'>
                   {desc[language]}
                 </li>
               ))}

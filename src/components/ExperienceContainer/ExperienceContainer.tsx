@@ -70,9 +70,9 @@ const ExperienceContainer = () => {
         >
           <TabGroup>
             <TabList className='flex gap-2'>
-              {categories.map(({ name, icon }) => (
+              {categories.map(({ id, name, icon }) => (
                 <Tab
-                  key={name.es}
+                  key={id}
                   className='flex items-center gap-2 rounded-full transition ease-in-out py-2 px-4 text-lg/6 font-semibold 
                 text-slate-800 dark:text-white 
                 focus:outline-none 
@@ -87,8 +87,8 @@ const ExperienceContainer = () => {
               ))}
             </TabList>
             <TabPanels className='mt-5 ps-2'>
-              {categories.map(({ name, items }) => (
-                <TabPanel key={name.es} className='rounded-xl gap-8'>
+              {categories.map(({ id, name, items }) => (
+                <TabPanel key={id} className='rounded-xl gap-8'>
                   <ol className='relative border-s border-gray-200 dark:border-gray-700'>
                     {items.map((item) => (
                       <ExperienceCard key={item.id} item={item} />
