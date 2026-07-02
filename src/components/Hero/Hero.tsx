@@ -4,8 +4,17 @@ import { motion } from 'framer-motion'
 import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline'
 import BgShape from '../BgShape/BgShape'
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext'
+
+const content = {
+  es: { role: 'Diseñador UX-UI', frontend: 'Frontend' },
+  en: { role: 'UX-UI Designer', frontend: 'Frontend' }
+}
 
 const Hero = () => {
+  const { language } = useLanguage()
+  const t = content[language]
+
   return (
     <div className='relative isolate h-[95vh] flex items-center' id='hero'>
       <BgShape />
@@ -21,7 +30,7 @@ const Hero = () => {
             carlos opazo.
           </h1>
           <h2 className='mt-6 leading-8 text-gray-400 text-xl sm:text-3xl font-semibold'>
-            Diseñador UX-UI <span className='font-light mx-2'>|</span> Frontend
+            {t.role} <span className='font-light mx-2'>|</span> {t.frontend}
           </h2>
         </motion.div>
         <Link href='#about'>

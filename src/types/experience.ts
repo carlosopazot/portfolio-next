@@ -1,7 +1,9 @@
+import { LocalizedText } from './localized'
+
 export interface ExperienceItem {
   id: number
-  title: string
-  date: string
+  title: LocalizedText
+  date: LocalizedText
   company: string
-  description: string[] | null
+  description: LocalizedText[] | null
 }

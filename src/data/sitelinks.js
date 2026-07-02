@@ -8,11 +8,11 @@ import {
 } from '@ant-design/icons'
 
 export const navigation = [
-  { name: 'Acerca de mí', href: '/#about' },
-  { name: 'Experiencia', href: '/#experience' },
-  { name: 'Habilidades', href: '/#skills' },
-  { name: 'Proyectos', href: '/#projects' },
-  { name: 'Contacto', href: '/#contact' }
+  { name: { es: 'Acerca de mí', en: 'About me' }, href: '/#about' },
+  { name: { es: 'Experiencia', en: 'Experience' }, href: '/#experience' },
+  { name: { es: 'Habilidades', en: 'Skills' }, href: '/#skills' },
+  { name: { es: 'Proyectos', en: 'Projects' }, href: '/#projects' },
+  { name: { es: 'Contacto', en: 'Contact' }, href: '/#contact' }
 ]
 
 export const socialLinks = [

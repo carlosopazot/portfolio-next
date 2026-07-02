@@ -5,8 +5,40 @@ import Input from '@/components/Input/Input'
 import InputTextArea from '@/components/InputTextArea/InputTextArea'
 import Notification from '@/components/Notification/Notification'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { useLanguage } from '@/context/LanguageContext'
+
+const content = {
+  es: {
+    firstName: 'Nombre',
+    lastName: 'Apellido',
+    email: 'Correo electrónico',
+    message: 'Mensaje',
+    submit: 'Enviar',
+    submitting: 'Enviando...',
+    submitAriaLabel: 'Enviar mensaje',
+    recaptchaError: 'Por favor, verifica que no eres un robot.',
+    successMessage:
+      '¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.',
+    genericError: 'Ha ocurrido un error. Por favor, intenta nuevamente.'
+  },
+  en: {
+    firstName: 'First name',
+    lastName: 'Last name',
+    email: 'Email',
+    message: 'Message',
+    submit: 'Send',
+    submitting: 'Sending...',
+    submitAriaLabel: 'Send message',
+    recaptchaError: 'Please verify that you are not a robot.',
+    successMessage: 'Thanks for your message! I will get in touch with you soon.',
+    genericError: 'An error has occurred. Please try again.'
+  }
+}
 
 const ContactForm = () => {
+  const { language } = useLanguage()
+  const t = content[language]
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -44,7 +76,7 @@ const ContactForm = () => {
 
     if (!recaptchaToken) {
       setNotification({
-        message: 'Por favor, verifica que no eres un robot.',
+        message: t.recaptchaError,
         type: 'error'
       })
       setShowNotification(true)
@@ -66,8 +98,7 @@ const ContactForm = () => {
       }
 
       setNotification({
-        message:
-          '¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.',
+        message: t.successMessage,
         type: 'success'
       })
       setShowNotification(true)
@@ -79,7 +110,7 @@ const ContactForm = () => {
       })
     } catch (err) {
       setNotification({
-        message: 'Ha ocurrido un error. Por favor, intenta nuevamente.',
+        message: t.genericError,
         type: 'error'
       })
       setShowNotification(true)
@@ -100,7 +131,7 @@ const ContactForm = () => {
             type='text'
             name='firstName'
             id='firstName'
-            label='Nombre'
+            label={t.firstName}
             value={formData.firstName}
             onChange={handleChange}
             autoComplete='given-name'
@@ -110,7 +141,7 @@ const ContactForm = () => {
             type='text'
             name='lastName'
             id='lastName'
-            label='Apellido'
+            label={t.lastName}
             value={formData.lastName}
             onChange={handleChange}
             autoComplete='family-name'
@@ -121,7 +152,7 @@ const ContactForm = () => {
               type='email'
               name='email'
               id='email'
-              label='Correo electrónico'
+              label={t.email}
               value={formData.email}
               onChange={handleChange}
               autoComplete='email'
@@ -132,7 +163,7 @@ const ContactForm = () => {
             <InputTextArea
               name='message'
               id='message'
-              label='Mensaje'
+              label={t.message}
               rows={4}
               value={formData.message}
               onChange={handleChange}
@@ -151,9 +182,9 @@ const ContactForm = () => {
             type='submit'
             className='block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
             disabled={submitting}
-            aria-label='Enviar mensaje'
+            aria-label={t.submitAriaLabel}
           >
-            {submitting ? 'Enviando...' : 'Enviar'}
+            {submitting ? t.submitting : t.submit}
           </button>
         </div>
       </form>
