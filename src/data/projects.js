@@ -239,7 +239,7 @@ export const projects = [
         id: 'front',
         title: { es: 'Frontend', en: 'Frontend' },
         intro: {
-          es: 'Mi trabajo consistio en el desarrollo del frontend de la plataforma, plasmando los diseños de la interfaz de usuario en código utilizando React.js y Bootstrap.',
+          es: 'Mi trabajo consistió en el desarrollo del frontend de la plataforma, plasmando los diseños de la interfaz de usuario en código utilizando React.js y Bootstrap.',
           en: 'My work consisted of developing the platform frontend, translating the user interface designs into code using React.js and Bootstrap.'
         },
         images: [Riivi1, Riivi2, Riivi3, Riivi4, Riivi5, Riivi6, Riivi7]
