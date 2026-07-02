@@ -5,8 +5,11 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import ProjectTags from '@/components/ProjectTags/ProjectTags'
+import { useLanguage } from '@/context/LanguageContext'
 
 const ProjectCardInfo = ({ project }: { project: Project }) => {
+  const { language } = useLanguage()
+
   return (
     <motion.div
       className='absolute z-50 bottom-0 left-0 rounded-lg right-0 w-full bg-white dark:bg-slate-800 p-4 flex flex-col align-middle gap-2'
@@ -24,7 +27,7 @@ const ProjectCardInfo = ({ project }: { project: Project }) => {
           href={`/projects/${project.id}`}
           className='flex w-8 h-8 rounded-full items-center justify-center text-gray-900 bg-gray-300 hover:bg-gray-400 transition ease-in-out'
           passHref
-          aria-label='Ver proyecto'
+          aria-label={language === 'es' ? 'Ver proyecto' : 'View project'}
         >
           <ChevronRightIcon className='w-6 h-6' />
         </Link>

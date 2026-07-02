@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import ToggleTheme from '@/components/ToggleTheme/ToggleTheme'
+import LanguageToggle from '@/components/LanguageToggle/LanguageToggle'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
 import { NavMenu } from './NavMenu'
@@ -53,6 +54,7 @@ const Navbar = () => {
         </div>
         <NavMenu items={navigation} hidden={true} />
         <div className='flex lg:flex-1 justify-end gap-2'>
+          <LanguageToggle />
           <ToggleTheme />
           <div className='flex lg:hidden'>
             <button

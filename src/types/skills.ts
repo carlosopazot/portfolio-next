@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { LocalizedText } from './localized'
 
 export interface Skill {
   id: string | number
@@ -6,6 +7,6 @@ export interface Skill {
   icon: ReactNode
   color: string
   delay: number
-  description: string
-  items?: string[]
+  description: LocalizedText
+  items?: LocalizedText[]
 }

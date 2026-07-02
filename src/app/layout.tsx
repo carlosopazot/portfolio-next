@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 const dmSans = DM_Sans({ subsets: ['latin'] })
 
@@ -58,9 +59,11 @@ export default function RootLayout({
   return (
     <html lang='es' className='scroll-smooth bg-white'>
       <body className={`${dmSans.className} bg-white dark:bg-slate-800`}>
-        <Navbar />
-        <main className='relative snap-y'>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          <main className='relative snap-y'>{children}</main>
+          <Footer />
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

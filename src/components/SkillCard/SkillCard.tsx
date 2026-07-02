@@ -3,8 +3,11 @@
 import { Skill } from '@/types'
 import Badge from '@/components/Badge/Badge'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
 const SkillCard = ({ item }: { item: Skill }) => {
+  const { language } = useLanguage()
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -24,12 +27,12 @@ const SkillCard = ({ item }: { item: Skill }) => {
             {item.title}
           </h3>
           <p className='text-gray-800 dark:text-white mb-4'>
-            {item.description}
+            {item.description[language]}
           </p>
         </div>
         <div className='flex justify-center align-middle flex-wrap gap-2'>
-          {(item.items ?? []).map((tag: string) => (
-            <Badge key={tag} text={tag} bgColor={item.color} />
+          {(item.items ?? []).map((tag, index) => (
+            <Badge key={index} text={tag[language]} bgColor={item.color} />
           ))}
         </div>
       </div>
